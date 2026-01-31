@@ -1,0 +1,105 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "create": "Create",
+        "close": "Close",
+        "english": "English",
+        "german": "Deutsch",
+        "selectLanguage": "Select Language"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "demo": "Demo"
+    },
+    "home": {
+        "title": "Welcome to Template Web App",
+        "subtitle": "A modern, browser-based application with Vite, React and Tailwind CSS",
+        "getStarted": "Get Started",
+        "viewDemo": "View Demo",
+        "features": {
+            "fast": {
+                "title": "Lightning Fast",
+                "description": "Built with Vite for maximum performance and Hot Module Replacement during development."
+            },
+            "design": {
+                "title": "Modern Design",
+                "description": "Modern Design System with Dark Mode support and custom animations."
+            },
+            "navigation": {
+                "title": "Navigation",
+                "description": "React-Router-DOM for seamless client-side navigation without page reloads."
+            }
+        },
+        "content": {
+            "title1": "Lorem Ipsum",
+            "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "text2": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "title2": "Dolor Sit Amet",
+            "text3": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "text4": "Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit."
+        },
+        "stats": {
+            "title": "Statistics",
+            "users": "Users",
+            "projects": "Projects",
+            "uptime": "Uptime",
+            "support": "Support"
+        },
+        "cta": {
+            "title": "Ready to get started?",
+            "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tryFree": "Try for Free",
+            "learnMore": "Learn More"
+        }
+    },
+    "about": {
+        "title": "About this App",
+        "description1": "This web app demonstrates the integration of Vite, React and React-Router-DOM with a modern Design System.",
+        "description2": "It uses Tailwind CSS, custom CSS variables and animations for a professional look and feel.",
+        "techStack": {
+            "title": "Technology Stack:",
+            "vite": "Vite 7.x - Build Tool",
+            "react": "React 19.x - UI Framework",
+            "router": "React-Router-DOM 7.x - Routing",
+            "tailwind": "Tailwind CSS 3.x - Styling",
+            "design": "Custom Design System"
+        }
+    },
+    "demo": {
+        "title": "Component Demo",
+        "counter": {
+            "title": "Counter Component",
+            "reset": "Reset"
+        },
+        "inputs": {
+            "title": "Input Component",
+            "text": "Text Input",
+            "textPlaceholder": "Enter text...",
+            "email": "Email Input",
+            "emailPlaceholder": "email@example.com",
+            "password": "Password Input",
+            "passwordPlaceholder": "Enter password...",
+            "disabled": "Disabled Input",
+            "disabledPlaceholder": "Disabled",
+            "value": "Value"
+        },
+        "colors": {
+            "title": "Color Palette",
+            "accent": "Accent",
+            "primary": "Primary BG",
+            "card": "Card",
+            "destructive": "Destructive"
+        },
+        "animations": {
+            "title": "Custom Animations",
+            "slideIn": "This row uses the slideInFromTop + highlightPulse animation"
+        }
+    }
+}

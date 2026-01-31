@@ -1,0 +1,105 @@
+{
+    "common": {
+        "loading": "Lädt...",
+        "error": "Fehler",
+        "success": "Erfolg",
+        "cancel": "Abbrechen",
+        "save": "Speichern",
+        "delete": "Löschen",
+        "edit": "Bearbeiten",
+        "create": "Erstellen",
+        "close": "Schließen",
+        "english": "English",
+        "german": "Deutsch",
+        "selectLanguage": "Sprache auswählen"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "demo": "Demo"
+    },
+    "home": {
+        "title": "Willkommen zur Template Web App",
+        "subtitle": "Eine moderne, browser-basierte Anwendung mit Vite, React und Tailwind CSS",
+        "getStarted": "Jetzt starten",
+        "viewDemo": "Demo ansehen",
+        "features": {
+            "fast": {
+                "title": "Blitzschnell",
+                "description": "Entwickelt mit Vite für maximale Performance und Hot Module Replacement während der Entwicklung."
+            },
+            "design": {
+                "title": "Modern Design",
+                "description": "Modernes Design-System mit Dark Mode Support und Custom-Animationen."
+            },
+            "navigation": {
+                "title": "Navigation",
+                "description": "React-Router-DOM für nahtlose Client-side Navigation ohne Page Reloads."
+            }
+        },
+        "content": {
+            "title1": "Lorem Ipsum",
+            "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "text2": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "title2": "Dolor Sit Amet",
+            "text3": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "text4": "Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit."
+        },
+        "stats": {
+            "title": "Statistiken",
+            "users": "Benutzer",
+            "projects": "Projekte",
+            "uptime": "Uptime",
+            "support": "Support"
+        },
+        "cta": {
+            "title": "Bereit loszulegen?",
+            "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tryFree": "Kostenlos testen",
+            "learnMore": "Mehr erfahren"
+        }
+    },
+    "about": {
+        "title": "Über diese App",
+        "description1": "Diese Web-App demonstriert die Integration von Vite, React und React-Router-DOM mit einem modernen Design-System.",
+        "description2": "Sie verwendet Tailwind CSS, Custom CSS-Variablen und Animationen für einen professionellen Look and Feel.",
+        "techStack": {
+            "title": "Technologie-Stack:",
+            "vite": "Vite 7.x - Build Tool",
+            "react": "React 19.x - UI Framework",
+            "router": "React-Router-DOM 7.x - Routing",
+            "tailwind": "Tailwind CSS 3.x - Styling",
+            "design": "Custom Design System"
+        }
+    },
+    "demo": {
+        "title": "Komponenten Demo",
+        "counter": {
+            "title": "Counter Component",
+            "reset": "Reset"
+        },
+        "inputs": {
+            "title": "Input Component",
+            "text": "Text Input",
+            "textPlaceholder": "Text eingeben...",
+            "email": "Email Input",
+            "emailPlaceholder": "email@beispiel.de",
+            "password": "Password Input",
+            "passwordPlaceholder": "Passwort eingeben...",
+            "disabled": "Disabled Input",
+            "disabledPlaceholder": "Deaktiviert",
+            "value": "Wert"
+        },
+        "colors": {
+            "title": "Farbpalette",
+            "accent": "Accent",
+            "primary": "Primary BG",
+            "card": "Card",
+            "destructive": "Destructive"
+        },
+        "animations": {
+            "title": "Custom Animations",
+            "slideIn": "Diese Row verwendet die slideInFromTop + highlightPulse Animation"
+        }
+    }
+}

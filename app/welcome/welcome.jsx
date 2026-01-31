@@ -1,6 +1,11 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
+/**
+ * Welcome Component (Standard React Router Template)
+ * Diese Komponente wird in unserem Template nicht verwendet,
+ * da wir eigene Routes haben.
+ */
 export function Welcome() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
