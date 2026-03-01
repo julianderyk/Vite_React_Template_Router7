@@ -70,6 +70,25 @@
             "router": "React-Router-DOM 7.x - Routing",
             "tailwind": "Tailwind CSS 3.x - Styling",
             "design": "Custom Design System"
+        },
+        "i18n": {
+            "title": "Internationalisierung (i18n)",
+            "description": "Diese Anwendung verfügt über ein vollständig skalierbares mehrsprachiges System mit intelligenter UI-Anpassung.",
+            "availableLanguages": "Verfügbare Sprachen:",
+            "features": {
+                "title": "Features:",
+                "smartUI": "Intelligente UI: Toggle-Button für 2 Sprachen, Dropdown-Menü für 3+ Sprachen",
+                "persistence": "localStorage Persistenz: Sprachauswahl wird über Sitzungen hinweg gespeichert",
+                "dynamic": "Dynamischer Wechsel: Sprache ändern ohne Seiten-Reload",
+                "scalable": "Einfach erweiterbar: Neue Sprachen in 3 einfachen Schritten hinzufügen"
+            },
+            "addLanguage": {
+                "title": "So fügst du eine neue Sprache hinzu:",
+                "step1": "Sprachkonfiguration in app/config/languages.js hinzufügen",
+                "step2": "Übersetzungsdatei erstellen (z.B. app/locales/it.json)",
+                "step3": "Übersetzungen in app/lib/i18n.js importieren",
+                "automatic": "Die UI passt sich automatisch an!"
+            }
         }
     },
     "demo": {

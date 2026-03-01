@@ -5,18 +5,26 @@
 
 import enTranslations from '../locales/en.json';
 import deTranslations from '../locales/de.json';
+import frTranslations from '../locales/fr.json';
+import esTranslations from '../locales/es.json';
+import ptTranslations from '../locales/pt.json';
+import { getDefaultLanguage, getAvailableLanguageCodes } from '../config/languages';
 
 /**
  * Aktuelle Sprache (wird aus LocalStorage geladen)
  */
-let currentLanguage = 'en'; // Default: English
+let currentLanguage = getDefaultLanguage();
 
 /**
  * Alle Übersetzungen aus JSON-Dateien
+ * HINWEIS: Bei neuen Sprachen hier die entsprechende JSON-Datei importieren und hinzufügen
  */
 const translations = {
     en: enTranslations,
     de: deTranslations,
+    fr: frTranslations,
+    es: esTranslations,
+    pt: ptTranslations,
 };
 
 /**
@@ -65,10 +73,18 @@ export const t = (key, lang = null, replacements = {}) => {
 
 /**
  * Setzt die aktuelle Sprache und speichert sie in LocalStorage
+ * Validiert gegen LANGUAGE_CONFIG (nicht gegen translations)
  */
 export const setLanguage = (lang) => {
+    const availableLanguages = getAvailableLanguageCodes();
+    
+    if (!availableLanguages.includes(lang)) {
+        console.error(`[i18n] Language '${lang}' is not enabled in LANGUAGE_CONFIG.`);
+        return;
+    }
+
     if (!translations[lang]) {
-        console.error(`[i18n] Language '${lang}' is not supported.`);
+        console.error(`[i18n] Language '${lang}' has no translations loaded.`);
         return;
     }
 
@@ -89,9 +105,10 @@ export const getLanguage = () => {
 
 /**
  * Gibt eine Liste der verfügbaren Sprachen zurück
+ * Nur Sprachen die in LANGUAGE_CONFIG definiert sind
  */
 export const getAvailableLanguages = () => {
-    return Object.keys(translations);
+    return getAvailableLanguageCodes();
 };
 
 /**
@@ -119,15 +136,23 @@ export const addTranslations = (lang, newTranslations) => {
 
 /**
  * Initialisiert i18n (lädt Sprache aus LocalStorage)
+ * Validiert gegen LANGUAGE_CONFIG
  */
 export const initI18n = () => {
     if (typeof window !== 'undefined' && window.localStorage) {
         const storedLang = localStorage.getItem('language');
-        if (storedLang && translations[storedLang]) {
+        const availableLanguages = getAvailableLanguageCodes();
+        
+        if (storedLang && availableLanguages.includes(storedLang) && translations[storedLang]) {
             currentLanguage = storedLang;
             console.log(`[i18n] Loaded language from localStorage: ${storedLang}`);
         } else {
-            console.log(`[i18n] Using default language: ${currentLanguage}`);
+            if (storedLang && !availableLanguages.includes(storedLang)) {
+                console.warn(`[i18n] Stored language '${storedLang}' is no longer available. Using default language: ${currentLanguage}`);
+                localStorage.removeItem('language');
+            } else {
+                console.log(`[i18n] Using default language: ${currentLanguage}`);
+            }
         }
     }
 };
@@ -159,3 +184,11 @@ export const hasTranslation = (key, lang = null) => {
 
     return true;
 };
+
+// HMR: Akzeptiere Updates und erzwinge Full Reload bei Änderungen
+if (import.meta.hot) {
+    import.meta.hot.accept(() => {
+        console.log('[HMR] i18n.js wurde geändert - Full Reload...');
+        window.location.reload();
+    });
+}

@@ -1,0 +1,151 @@
+{
+    "common": {
+        "loading": "Carregando...",
+        "error": "Erro",
+        "success": "Sucesso",
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "delete": "Excluir",
+        "edit": "Editar",
+        "create": "Criar",
+        "close": "Fechar",
+        "english": "English",
+        "german": "Deutsch",
+        "selectLanguage": "Selecionar idioma"
+    },
+    "nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "demo": "Demo"
+    },
+    "home": {
+        "title": "Bem-vindo ao Template Web App",
+        "subtitle": "Uma aplicação web moderna baseada em navegador com Vite, React e Tailwind CSS",
+        "getStarted": "Começar",
+        "viewDemo": "Ver demo",
+        "features": {
+            "fast": {
+                "title": "Ultra-rápido",
+                "description": "Desenvolvido com Vite para máximo desempenho e Hot Module Replacement durante o desenvolvimento."
+            },
+            "design": {
+                "title": "Design Moderno",
+                "description": "Sistema de design moderno com suporte a modo escuro e animações personalizadas."
+            },
+            "navigation": {
+                "title": "Navegação",
+                "description": "React-Router-DOM para navegação suave do lado do cliente sem recarregamento de página."
+            }
+        },
+        "content": {
+            "title1": "Lorem Ipsum",
+            "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "text2": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "title2": "Dolor Sit Amet",
+            "text3": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "text4": "Et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit."
+        },
+        "stats": {
+            "title": "Estatísticas",
+            "users": "Usuários",
+            "projects": "Projetos",
+            "uptime": "Disponibilidade",
+            "support": "Suporte"
+        },
+        "cta": {
+            "title": "Pronto para começar?",
+            "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tryFree": "Experimente grátis",
+            "learnMore": "Saiba mais"
+        }
+    },
+    "about": {
+        "title": "Sobre esta aplicação",
+        "description1": "Esta aplicação web demonstra a integração de Vite, React e React-Router-DOM com um sistema de design moderno.",
+        "description2": "Utiliza Tailwind CSS, variáveis CSS personalizadas e animações para um visual profissional.",
+        "techStack": {
+            "title": "Stack Tecnológico:",
+            "vite": "Vite 7.x - Ferramenta de build",
+            "react": "React 19.x - Framework UI",
+            "router": "React-Router-DOM 7.x - Roteamento",
+            "tailwind": "Tailwind CSS 3.x - Estilos",
+            "design": "Sistema de design personalizado"
+        },
+        "i18n": {
+            "title": "Internacionalização (i18n)",
+            "description": "Esta aplicação possui um sistema multilíngue totalmente escalável com adaptação inteligente da interface.",
+            "availableLanguages": "Idiomas disponíveis:",
+            "features": {
+                "title": "Características:",
+                "smartUI": "Interface inteligente: Botão de alternância para 2 idiomas, menu suspenso para 3+ idiomas",
+                "persistence": "Persistência localStorage: A seleção de idioma é salva entre sessões",
+                "dynamic": "Mudança dinâmica: Alterar idioma sem recarregar a página",
+                "scalable": "Fácil de expandir: Adicionar novos idiomas em 3 passos simples"
+            },
+            "addLanguage": {
+                "title": "Como adicionar um novo idioma:",
+                "step1": "Adicionar configuração de idioma em app/config/languages.js",
+                "step2": "Criar arquivo de tradução (ex. app/locales/it.json)",
+                "step3": "Importar traduções em app/lib/i18n.js",
+                "automatic": "A interface se adaptará automaticamente!"
+            }
+        }
+    },
+    "demo": {
+        "title": "Demo de componentes",
+        "counter": {
+            "title": "Componente Contador",
+            "reset": "Reiniciar"
+        },
+        "inputs": {
+            "title": "Componente Input",
+            "text": "Entrada de texto",
+            "textPlaceholder": "Digite o texto...",
+            "email": "Entrada de email",
+            "emailPlaceholder": "email@exemplo.pt",
+            "password": "Entrada de senha",
+            "passwordPlaceholder": "Digite a senha...",
+            "disabled": "Input desabilitado",
+            "disabledPlaceholder": "Desabilitado",
+            "value": "Valor"
+        },
+        "colors": {
+            "title": "Paleta de cores",
+            "accent": "Destaque",
+            "primary": "Fundo primário",
+            "card": "Cartão",
+            "destructive": "Destrutivo"
+        },
+        "animations": {
+            "title": "Animações personalizadas",
+            "slideIn": "Esta linha usa a animação slideInFromTop + highlightPulse"
+        }
+    },
+    "footer": {
+        "brand": {
+            "title": "Template Web App",
+            "description": "Uma aplicação web moderna construída com tecnologias de ponta."
+        },
+        "quickLinks": {
+            "title": "Links rápidos",
+            "home": "Início",
+            "about": "Sobre",
+            "demo": "Demo"
+        },
+        "resources": {
+            "title": "Recursos",
+            "vite": "Documentação Vite",
+            "react": "Documentação React",
+            "tailwind": "Tailwind CSS"
+        },
+        "social": {
+            "title": "Siga-nos"
+        },
+        "copyright": "© {{year}} Template Web App. Todos os direitos reservados.",
+        "legal": {
+            "privacy": "Privacidade",
+            "terms": "Termos de serviço",
+            "imprint": "Aviso legal"
+        }
+    }
+}

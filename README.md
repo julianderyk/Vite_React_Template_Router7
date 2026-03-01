@@ -63,26 +63,29 @@ npm run start
 app/
 ├── components/          # Wiederverwendbare Komponenten
 │   ├── ui/             # UI Komponenten (Input, etc.)
-│   ├── Navigation.tsx  # Haupt-Navigation
-│   ├── DarkModeToggle.tsx
-│   └── LanguageToggle.tsx
+│   ├── Navigation.jsx  # Haupt-Navigation
+│   ├── Footer.jsx      # Footer mit Links und Social Media
+│   ├── DarkModeToggle.jsx
+│   └── LanguageToggle.jsx
+├── config/             # Konfigurationsdateien
+│   └── languages.js    # Sprachkonfiguration
 ├── context/            # React Contexts
-│   └── LanguageContext.tsx
+│   └── LanguageContext.jsx
 ├── hooks/              # Custom Hooks
-│   └── useTranslation.ts
+│   └── useTranslation.js
 ├── lib/                # Utility Functions
-│   ├── i18n.ts        # Internationalisierung
-│   └── utils.ts       # Helper Functions
+│   ├── i18n.js        # Internationalisierung
+│   └── utils.js       # Helper Functions
 ├── locales/           # Übersetzungen
 │   ├── de.json
 │   └── en.json
 ├── routes/            # React Router Routes
-│   ├── home.tsx
-│   ├── about.tsx
-│   └── demo.tsx
+│   ├── home.jsx
+│   ├── about.jsx
+│   └── demo.jsx
 ├── app.css            # Globale Styles & Tailwind Config
-├── root.tsx           # Root Layout mit Providern
-└── routes.ts          # Routes Konfiguration
+├── root.jsx           # Root Layout mit Providern
+└── routes.js          # Routes Konfiguration
 ```
 
 ## 🎨 Styling
@@ -116,21 +119,73 @@ Das Projekt verwendet ein vollständiges Design System mit:
 
 Das i18n-System unterstützt:
 
-- **Mehrere Sprachen** (DE, EN)
+- **Mehrere Sprachen** mit einfacher Erweiterbarkeit
 - **localStorage Persistenz** für Sprachauswahl
 - **Dynamischer Sprachwechsel** ohne Page Reload
 - **Verschachtelte Translation Keys** mit Dot-Notation
-- **Variable Replacements** (z.B. `{{seconds}}`)
+- **Variable Replacements** (z.B. `{{year}}`)
+- **Intelligente UI**: Toggle für 2 Sprachen, Dropdown für 3+ Sprachen
 
-Verwendung:
+### Aktuelle Sprachen
+- 🇬🇧 English (EN)
+- 🇩🇪 Deutsch (DE)
+- 🇫🇷 Français (FR)
+- 🇪🇸 Español (ES)
+- 🇵🇹 Português (PT)
 
-```tsx
+### Neue Sprache hinzufügen
+
+1. **Sprachkonfiguration erweitern** (`app/config/languages.js`):
+```javascript
+{
+    code: 'fr',
+    name: 'French',
+    nativeName: 'Français',
+    flag: 'circle-flags:fr',
+    default: false
+}
+```
+
+2. **Übersetzungsdatei erstellen** (`app/locales/fr.json`):
+```json
+{
+    "common": {
+        "loading": "Chargement...",
+        "error": "Erreur",
+        ...
+    }
+}
+```
+
+3. **In i18n.js importieren** (`app/lib/i18n.js`):
+```javascript
+import frTranslations from '../locales/fr.json';
+
+const translations = {
+    en: enTranslations,
+    de: deTranslations,
+    fr: frTranslations,  // Neu
+};
+```
+
+Das war's! Der LanguageToggle passt sich automatisch an:
+- **2 Sprachen**: Toggle-Button zum schnellen Wechseln
+- **3+ Sprachen**: Dropdown-Menü mit Flaggen und Namen
+
+### Verwendung
+
+```jsx
 import { useTranslation } from '../hooks/useTranslation';
 
 function MyComponent() {
   const t = useTranslation();
   
-  return <h1>{t('home.title')}</h1>;
+  return (
+    <div>
+      <h1>{t('home.title')}</h1>
+      <p>{t('footer.copyright', { year: 2024 })}</p>
+    </div>
+  );
 }
 ```
 

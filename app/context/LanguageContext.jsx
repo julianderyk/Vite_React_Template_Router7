@@ -50,3 +50,11 @@ export const LanguageProvider = ({ children }) => {
         </LanguageContext.Provider>
     );
 };
+
+// HMR: Akzeptiere Updates und erzwinge Full Reload bei Änderungen
+if (import.meta.hot) {
+    import.meta.hot.accept(() => {
+        console.log('[HMR] LanguageContext wurde geändert - Full Reload...');
+        window.location.reload();
+    });
+}
