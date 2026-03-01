@@ -101,5 +101,32 @@
             "title": "Custom Animations",
             "slideIn": "This row uses the slideInFromTop + highlightPulse animation"
         }
+    },
+    "footer": {
+        "brand": {
+            "title": "Template Web App",
+            "description": "A modern web application built with cutting-edge technologies."
+        },
+        "quickLinks": {
+            "title": "Quick Links",
+            "home": "Home",
+            "about": "About",
+            "demo": "Demo"
+        },
+        "resources": {
+            "title": "Resources",
+            "vite": "Vite Documentation",
+            "react": "React Documentation",
+            "tailwind": "Tailwind CSS"
+        },
+        "social": {
+            "title": "Follow Us"
+        },
+        "copyright": "© {{year}} Template Web App. All rights reserved.",
+        "legal": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "imprint": "Imprint"
+        }
     }
 }

@@ -8,6 +8,7 @@ import {
 } from "react-router";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import "./app.css";
 
 /**
@@ -24,7 +25,7 @@ export const links = () => [
 
 /**
  * Layout Component
- * Wrapped die gesamte App mit LanguageProvider und Navigation
+ * Wrapped die gesamte App mit LanguageProvider, Navigation und Footer
  */
 export function Layout({ children }) {
   return (
@@ -37,11 +38,12 @@ export function Layout({ children }) {
       </head>
       <body>
         <LanguageProvider>
-          <div className="min-h-screen bg-background text-foreground">
+          <div className="min-h-screen bg-background text-foreground flex flex-col">
             <Navigation />
-            <main className="container mx-auto p-8 max-w-7xl">
+            <main className="container mx-auto p-8 max-w-7xl flex-grow">
               {children}
             </main>
+            <Footer />
           </div>
         </LanguageProvider>
         <ScrollRestoration />
